@@ -11559,7 +11559,7 @@
     window.NBA_V12_PLAYER_VISUAL={PlayerImage:PlayerImage,PlayerThumb:PlayerThumb,getPlayerVisual:getPlayerVisual,playerPhotoFilename:playerPhotoFilename,buildPlayerCommunityPost:buildPlayerCommunityPost};
     assertProbabilityTables();
     load();
-    setInterval(function () { syncDailyState(Date.now()); render(); },1000);
+    setInterval(function () { syncDailyState(Date.now()); if (state.tab === 'home' || state.tab === 'shop') render(); },1000);
     window.NBA_V12={ECONOMY_CONFIG:ECONOMY_CONFIG,AD_REWARD_CONFIG:AD_REWARD_CONFIG,COMMUNITY_CONFIG:COMMUNITY_CONFIG,PACK_PROBABILITIES:PACK_PROBABILITIES,SHARD_RECYCLE_VALUE:SHARD_RECYCLE_VALUE,SHARD_EXCHANGE_COST:SHARD_EXCHANGE_COST,TIER_BASE_PRICE:TIER_BASE_PRICE,VALID_TIERS:VALID_TIERS,rollTier:rollTier,drawPackTiers:drawPackTiers,applyPityResetFromTier:applyPityResetFromTier,getPityGuaranteeTier:getPityGuaranteeTier,validateTradePrice:validateTradePrice,getReferencePrice:getReferencePrice,migrateSave:migrateSave,createDefaultUser:createDefaultUser,createCardRecord:createCardRecord,LocalMockTradeService:LocalMockTradeService,CloudBaseTradeService:CloudBaseTradeService,LocalLeaderboardService:LocalLeaderboardService,playerDatabase:playerDatabase,watchAdReward:watchAdReward,refreshVataskTaskState:refreshVataskTaskState,getCommunityApis:getCommunityApis,buildCommunityPost:buildCommunityPost,publishCommunityPost:publishCommunityPost,normalizeCommunityThread:normalizeCommunityThread,extractCommunityThreadDetail:extractCommunityThreadDetail,fetchCommunityThreads:fetchCommunityThreads,submitSafeReply:submitSafeReply};
     render();
   }());
